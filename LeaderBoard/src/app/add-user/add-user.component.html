@@ -1,1 +1,17 @@
-<p>add-user works!</p>
+<div class="AddUser" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Add User</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-full-width">
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input type = "text"  placeholder="Username" matInput ngModel name ="Username"id = "Username" class = "form-control" required = "true">
+          </mat-form-field>
+        </mat-card-content>
+  
+        <button type ="button" color="accent" (click)="registerClient()" mat-raised-button>Add</button>
+    </form>
+    </mat-card>
+  </div>
