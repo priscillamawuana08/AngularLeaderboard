@@ -2,17 +2,15 @@
     <thead>
         <th>Name</th>
         <th>Honour</th>
-        <!-- <th>Language</th> -->
+        <th>Language</th>
         <th>Rank</th>
     </thead>
     <tbody>
-        <tr *ngFor="let data of rankData">
+        <tr *ngFor="let data of allData">
             <td>{{data.username}}</td>
             <td>{{data.honour}}</td>
-            <!-- <td>{{data.honour}}</td> -->
+            <td>{{data.Language}}</td> 
             <td>{{data.overall_rank}}</td>
         </tr>
     </tbody>
 </table>
-<div>
-

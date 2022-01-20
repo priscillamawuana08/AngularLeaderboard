@@ -32,6 +32,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 
 import'hammerjs';
+import { WelcomeComponent } from './Pages/welcome/welcome.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import'hammerjs';
     HonorComponent,
     OverallRankComponent,
     LanguagesComponent,
+    WelcomeComponent,
+    LeaderboardComponent,
     
   ],
   imports: [

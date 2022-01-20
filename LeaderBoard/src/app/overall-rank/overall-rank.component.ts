@@ -1,14 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaderboardService } from '../Service/leaderboard.service';
 
 
-// export interface Profile{
-//   id: String;
-//   name: String;
-//   clan: String;
-//   honor: BigInteger;
-//   language : String;
-//   overallRank : BigInteger;
-// }
+
 
 @Component({
   selector: 'app-overall-rank',
@@ -17,10 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverallRankComponent implements OnInit {
   
-
-  constructor() { }
+  rankData: Array<any> = []
+  constructor(private leaderboardService: LeaderboardService) { }
 
   ngOnInit(): void {
+    this.getRanks()
+  }
+
+  getRanks(){
+    this.leaderboardService.getRanks().subscribe((data) => {
+      this.rankData = data
+      console.log("Ranks: ", this.rankData)
+    });
   }
 
 }

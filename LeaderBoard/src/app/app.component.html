@@ -1,23 +1,23 @@
-
-
 <mat-drawer-container class="example-container">
-  <!-- <mat-drawer mode="side" opened>
-    <app-sidebar></app-sidebar>
-  </mat-drawer> -->
   <mat-drawer-content>
     <app-toolbar></app-toolbar>
-    <mat-tab-group>
-      <mat-tab label="Overall Rank"> Content 1 </mat-tab>
-    
-      <mat-tab label="Honor"> Content 2 </mat-tab>
+    <app-honor></app-honor>
 
-      <mat-tab label="Language"> Content 3 </mat-tab>
-      
-    </mat-tab-group>
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
+ 
 
-<router-outlet></router-outlet>
+ <!-- <mat-tab-group>
+  <mat-tab label="Overall Rank"> Content 1 </mat-tab>
+
+  <mat-tab label="Honor"> Content 2 </mat-tab>
+
+  <mat-tab label="Language"> Content 3 </mat-tab>
+  
+</mat-tab-group> -->
+
+
 
 
 
