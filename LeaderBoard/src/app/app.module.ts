@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,14 +20,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { HonorComponent } from './honor/honor.component';
 import { OverallRankComponent } from './overall-rank/overall-rank.component';
 import { LanguagesComponent } from './languages/languages.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
-
+import'hammerjs';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,7 @@ import { LanguagesComponent } from './languages/languages.component';
     HonorComponent,
     OverallRankComponent,
     LanguagesComponent,
-   
+    
   ],
   imports: [
     BrowserModule,
@@ -61,9 +65,14 @@ import { LanguagesComponent } from './languages/languages.component';
     MatListModule,
     MatToolbarModule,
     MatGridListModule,
-    
+    MatTableModule,
+  MatTabsModule,
+  FormsModule,
+   ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
+ 
 })
 export class AppModule { }
