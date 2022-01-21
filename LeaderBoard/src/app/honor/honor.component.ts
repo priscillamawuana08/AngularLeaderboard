@@ -19,7 +19,7 @@ export class HonorComponent implements OnInit {
   getHonour(){
     this.leaderboardService.getHonour().subscribe((data) => {
       this.honourData = data
-      console.log(this.honourData);
+      console.log(this.honourData); 
       
     });
 
