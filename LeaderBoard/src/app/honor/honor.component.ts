@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaderBoardModel } from '../model/leaderboard-model';
 import { LeaderboardService } from '../Service/leaderboard.service';
 
 @Component({
@@ -8,14 +9,14 @@ import { LeaderboardService } from '../Service/leaderboard.service';
 })
 export class HonorComponent implements OnInit {
 
-  honourData: Array<any> = []
+  honourData: Array<LeaderBoardModel> = []
   constructor(private leaderboardService: LeaderboardService) { }
 
   ngOnInit(): void {
-    this.getLeaderboard()
+    this.getHonour()
   }
 
-  getLeaderboard(){
+  getHonour(){
     this.leaderboardService.getHonour().subscribe((data) => {
       this.honourData = data
       console.log(this.honourData);

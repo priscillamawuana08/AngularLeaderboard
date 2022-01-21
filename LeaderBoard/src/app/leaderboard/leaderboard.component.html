@@ -2,6 +2,7 @@
     <thead>
         <th>Name</th>
         <th>Honour</th>
+        <th>Clan</th>
         <th>Language</th>
         <th>Rank</th>
     </thead>
@@ -9,7 +10,8 @@
         <tr *ngFor="let data of allData">
             <td>{{data.username}}</td>
             <td>{{data.honour}}</td>
-            <td>{{data.Language}}</td> 
+            <td>{{data.clan}}</td>
+            <td>{{data.languages[0].name}}</td> 
             <td>{{data.overall_rank}}</td>
         </tr>
     </tbody>

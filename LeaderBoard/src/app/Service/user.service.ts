@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-
   ADD_USER_API_URL = `${environment.API_URL}/add`
   
   constructor(private httpClient: HttpClient) { }

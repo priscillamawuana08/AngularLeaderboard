@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaderBoardModel } from '../model/leaderboard-model';
 import { LeaderboardService } from '../Service/leaderboard.service';
 
 
@@ -10,16 +11,16 @@ import { LeaderboardService } from '../Service/leaderboard.service';
   styleUrls: ['./overall-rank.component.scss']
 })
 export class OverallRankComponent implements OnInit {
-  
-  rankData: Array<any> = []
+
+  rankData: Array<LeaderBoardModel> = []
   constructor(private leaderboardService: LeaderboardService) { }
 
   ngOnInit(): void {
-    this.getRanks()
+    this.getOverAllRanks()
   }
 
-  getRanks(){
-    this.leaderboardService.getRanks().subscribe((data) => {
+  getOverAllRanks(){
+    this.leaderboardService.getOverAllRanks().subscribe((data) => {
       this.rankData = data
       console.log("Ranks: ", this.rankData)
     });
