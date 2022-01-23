@@ -1,6 +1,6 @@
-<table mat-table>
-    <!-- <thead > -->
-    <ng-container matColumnDef="name">
+<!-- <table mat-table [dataSource]="allData">
+    
+    <ng-container matColumnDef="username">
         <th mat-header-cell *matHeaderCellDef>Name</th>
         <td mat-cell *matCellDef="let data">{{data.username}}</td>
     </ng-container>
@@ -20,13 +20,29 @@
         <td mat-cell *matCellDef="let data">{{data.languages[0].name}}</td>
     </ng-container>
 
-    <ng-container matColumnDef="rank">
+    <ng-container matColumnDef="overall_rank">
             <th mat-header-cell *matHeaderCellDef>Rank</th>
             <td mat-cell *matCellDef="let data">{{data.overall_rank}}</td>
     </ng-container>
           
     <tr mat-header-row *matHeaderRowDef="allData" ></tr>
     <tr mat-row *matRowDef="let row; columns:allData ;"></tr>
+    </table> -->
+    <table>
+        <thead> 
+        <th>Name</th>
+        <th>Clan</th>
+        <th>Honour</th>
+        <th>Language</th>
+        <th>Rank</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of allData">
+                <td>{{data.username}}</td>
+                <td>{{data.clan}}</td>
+                <td>{{data.honour}}</td>
+                <td>{{data.languages[0].name}}</td> 
+                <td>{{data.overall_rank}}</td>
+            </tr>
+        </tbody>
     </table>
-        
-   
